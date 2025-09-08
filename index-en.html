@@ -14,13 +14,120 @@
 
   <nav>
     <ul>
+      <li><a href="#base-classes">Base Classes</a></li>
+      <li><a href="#advanced-classes">Advanced Classes</a></li>
+      <li><a href="#early-game">Early Game</a></li>
+      <li><a href="#relationships">Counters</a></li>
       <li><a href="#visualization">Explorer</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="index.html">中文</a></li>
+      <li><a href="index.html" title="Switch to Chinese">中文</a></li>
     </ul>
   </nav>
 
   <main>
+    <section id="base-classes">
+      <h2>Base Classes</h2>
+      <div class="promotion-info">
+        <p><strong>Promotion:</strong> Reach B reputation and spend Honor to promote to advanced classes.</p>
+      </div>
+      <div class="class-grid" id="baseClassGrid"></div>
+    </section>
+
+    <section id="advanced-classes">
+      <h2>Advanced Classes</h2>
+      <div class="class-grid" id="advancedClassGrid"></div>
+    </section>
+
+    <section id="early-game">
+      <h2>Early Game Priorities</h2>
+      <div class="promotion-info">
+        <p><strong>Tip:</strong> Leveraging counters grants x2 damage and a big power spike.</p>
+      </div>
+
+      <div class="damage-chart-container">
+        <h3>Damage Advantage Highlights</h3>
+        <div class="damage-chart-grid">
+          <div class="damage-chart-item hard-counter">
+            <div class="chart-attacker">Gryphon Knight</div>
+            <div class="chart-arrow">→ x2 Damage →</div>
+            <div class="chart-defender">All Cavalry</div>
+            <div class="chart-reason">Air superiority overwhelms ground cavalry</div>
+          </div>
+
+          <div class="damage-chart-item strong-against">
+            <div class="chart-attacker">Arbalist/Hunter</div>
+            <div class="chart-arrow">→ x2 Damage →</div>
+            <div class="chart-defender">Flying Units</div>
+            <div class="chart-reason">Ranged tools specialize in anti-air</div>
+          </div>
+
+          <div class="damage-chart-item strong-against">
+            <div class="chart-attacker">Hoplite</div>
+            <div class="chart-arrow">→ x2 Damage →</div>
+            <div class="chart-defender">Cavalry Charge</div>
+            <div class="chart-reason">Spear formations blunt charges</div>
+          </div>
+
+          <div class="damage-chart-item strong-against">
+            <div class="chart-attacker">Elven Archer</div>
+            <div class="chart-arrow">→ x2 Damage →</div>
+            <div class="chart-defender">Heavy Armor</div>
+            <div class="chart-reason">Magic ignores physical defense</div>
+          </div>
+        </div>
+
+        <div class="chart-note">
+          <strong>Note:</strong> Use these matchups early to snowball fights with multiplied damage.
+        </div>
+      </div>
+    </section>
+
+    <section id="relationships">
+      <h2>Class Counter Relationships</h2>
+      <div class="relationship-container">
+        <div class="relationship-chart">
+          <h3>Key Counters</h3>
+          <div class="relationship-item counter">
+            <span class="attacker">Gryphon Knight</span> → <span class="defender">Cavalry</span>
+            <div class="reason">Aerial advantage hard-counters ground cavalry (x2)</div>
+          </div>
+          <div class="relationship-item effective">
+            <span class="attacker">Arbalist/Hunter</span> → <span class="defender">Flying Units</span>
+            <div class="reason">Anti-air ranged weapons (x2)</div>
+          </div>
+          <div class="relationship-item effective">
+            <span class="attacker">Hoplite</span> → <span class="defender">Cavalry Charge</span>
+            <div class="reason">Spears counter charging cavalry (x2)</div>
+          </div>
+          <div class="relationship-item effective">
+            <span class="attacker">Elven Archer</span> → <span class="defender">Heavy Armor</span>
+            <div class="reason">Magic penetration (x2)</div>
+          </div>
+          <div class="relationship-item effective">
+            <span class="attacker">Gladiator</span> → <span class="defender">Dense Formations</span>
+            <div class="reason">Row-cleaves punish clustered enemies</div>
+          </div>
+          <div class="relationship-item effective">
+            <span class="attacker">Thief</span> → <span class="defender">Casters</span>
+            <div class="reason">High evasion and mobility disrupt spellcasters</div>
+          </div>
+        </div>
+
+        <div class="strategy-tips">
+          <h3>Strategy Tips</h3>
+          <ul>
+            <li><strong>Double Damage:</strong> Play into counters to secure fast wins.</li>
+            <li><strong>Frontline:</strong> Put evasive or tanky units (Thief, Knight) in front.</li>
+            <li><strong>Backline:</strong> Keep damage dealers/support safe in the back.
+            </li>
+            <li><strong>Leader Choice:</strong> Leader affects unit capacity (engage cost).</li>
+            <li><strong>Gear Priority:</strong> Favor items that grant extra actions or AP/PP.</li>
+            <li><strong>Chase/Counter:</strong> Effects enabling pursuit/counterattacks are premium.</li>
+            <li><strong>Promotion:</strong> Save Honor at C, promote at reputation B.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="visualization">
       <h2>Class Explorer</h2>
       <div class="visualization-container">
@@ -53,17 +160,7 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <div class="strategy-tips">
-        <h3>Notes</h3>
-        <ul>
-          <li>Data reflects common class interactions and counter patterns.</li>
-          <li>Use the explorer to see advantages, weaknesses, and reasons.</li>
-          <li>Hover and scroll animations aim to improve readability.</li>
-        </ul>
-      </div>
-    </section>
+    
   </main>
 
   <footer>

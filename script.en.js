@@ -211,9 +211,46 @@ document.addEventListener('DOMContentLoaded', function () {
   classSelect.addEventListener('change', function () {
     renderRelationships(this.value);
   });
+  // Render class cards for EN page
+  try {
+    const baseKeys = [
+      'fighter', 'arbalist', 'cleric', 'thief',
+      'hoplite', 'hunter', 'elven-archer', 'elven-fencer'
+    ];
+    const advKeys = [
+      'knight', 'crusader', 'gladiator', 'dark-knight',
+      'gryphon-knight', 'housecarl', 'elven-augur', 'elven-sibyl'
+    ];
+    renderClassCards(baseKeys, 'baseClassGrid', false);
+    renderClassCards(advKeys, 'advancedClassGrid', true);
+  } catch (e) {
+    console.warn('Card rendering skipped:', e);
+  }
   addClassCardInteractions();
   addSmoothScrolling();
   addScrollAnimations();
   renderRelationships('');
   console.log('Unicorn Overlord Class Guide (EN) loaded');
 });
+
+function renderClassCards(keys, containerId, advanced) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const fragments = keys.map(k => {
+    const d = classData[k];
+    if (!d) return '';
+    const advClass = advanced ? ' advanced' : '';
+    return `
+      <div class="class-card${advClass}" data-class="${k}">
+        <h3>${d.name}</h3>
+        <div class="class-type">${d.type}</div>
+        <p><strong>Traits:</strong> ${d.description}</p>
+        <p><strong>Representative:</strong> ${d.characters}</p>
+        <div class="leader-effect">
+          <strong>Leader Effect:</strong> ${d.leaderEffect}
+        </div>
+      </div>
+    `;
+  }).join('');
+  container.innerHTML = fragments;
+}
