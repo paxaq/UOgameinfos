@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.class-card {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.class-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.class-card.advanced::before {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.class-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.class-type {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.class-card.advanced .class-type {
+    background: #f5576c;
+}
+
+.class-card p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.class-card strong {
+    color: #495057;
+}
+
+.leader-effect {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.relationship-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.relationship-chart {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.relationship-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.attacker {
+    background: #dc3545;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+.defender {
+    background: #6c757d;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+.reason {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    flex: 1;
+}
+
+.strategy-tips {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ffeaa7;
+}
+
+.strategy-tips h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.strategy-tips ul {
+    list-style: none;
+}
+
+.strategy-tips li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.strategy-tips li::before {
+    content: '⚔️';
+    position: absolute;
+    left: 0;
+}
+
+.visualization-container {
+    text-align: center;
+}
+
+.class-selector {
+    margin-bottom: 2rem;
+}
+
+.class-selector h3 {
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+#classSelect {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    background: white;
+    color: #495057;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+#classSelect:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.relationship-display {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage-list, .disadvantage-list {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.advantage-item, .disadvantage-item {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-item {
+    border-left: 4px solid #28a745;
+}
+
+.disadvantage-item {
+    border-left: 4px solid #dc3545;
+}
+
+.class-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.advantage-item .class-icon {
+    background: #28a745;
+}
+
+.disadvantage-item .class-icon {
+    background: #dc3545;
+}
+
+.promotion-info {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.leader-effect-display {
+    background: rgba(40, 167, 69, 0.1);
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 3px solid #28a745;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.counter-badge {
+    background: #dc3545;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.damage-multiplier {
+    background: #28a745 !important;
+    color: white !important;
+    padding: 0.2rem 0.6rem !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    margin-left: 0.5rem !important;
+    display: inline-block !important;
+}
+
+.hard-counter {
+    border-left-color: #dc3545 !important;
+    background: rgba(220, 53, 69, 0.05);
+}
+
+.strong-against {
+    border-left-color: #28a745 !important;
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.relationship-item.counter {
+    border-left-color: #dc3545;
+    background: rgba(220, 53, 69, 0.05);
+}
+
+.relationship-item.effective {
+    border-left-color: #28a745;
+}
+
+.selected-class-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.selected-class-info h3 {
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* 伤害类型优势图表样式 */
+.damage-chart-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    margin-top: 2rem;
+}
+
+.damage-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.damage-chart-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #28a745;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.damage-chart-item.hard-counter {
+    border-left-color: #dc3545;
+    background: linear-gradient(145deg, #fff5f5, #ffeaea);
+}
+
+.damage-chart-item.strong-against {
+    border-left-color: #28a745;
+    background: linear-gradient(145deg, #f0fff4, #e6ffe6);
+}
+
+.damage-chart-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.chart-attacker {
+    background: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.chart-arrow {
+    color: #6c757d;
+    font-weight: 600;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.chart-defender {
+    background: #6c757d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+.chart-reason {
+    color: #495057;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.chart-note {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .class-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .relationship-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .damage-chart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .relationship-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .reason {
+        margin-left: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.class-card, .relationship-item, .strategy-tips {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.class-card:nth-child(1) { animation-delay: 0.1s; }
+.class-card:nth-child(2) { animation-delay: 0.2s; }
+.class-card:nth-child(3) { animation-delay: 0.3s; }
+.class-card:nth-child(4) { animation-delay: 0.4s; }
+.class-card:nth-child(5) { animation-delay: 0.5s; }
+.class-card:nth-child(6) { animation-delay: 0.6s; }

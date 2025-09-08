@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Overlord 职业系统指南</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Unicorn Overlord 职业系统指南</h1>
+        <p>探索各职业的特点与相互克制关系</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#base-classes">基础职业</a></li>
+            <li><a href="#advanced-classes">高级职业</a></li>
+            <li><a href="#early-game">早期重点</a></li>
+            <li><a href="#relationships">克制关系</a></li>
+            <li><a href="#visualization">关系图</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="base-classes">
+            <h2>基础职业</h2>
+            <div class="promotion-info">
+                <p><strong>晋升系统：</strong>达到声望B级后，花费荣誉点数可晋升至高级职业</p>
+            </div>
+            <div class="class-grid">
+                <div class="class-card" data-class="fighter">
+                    <h3>战士 (Fighter)</h3>
+                    <div class="class-type">重装步兵</div>
+                    <p><strong>特点：</strong>拥有优秀的物理防御力，能够保护队友</p>
+                    <p><strong>代表角色：</strong>Lex, Colm</p>
+                    <p><strong>有效对抗：</strong>远程单位，脆弱目标</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>抗远程辅助 - 减少远程攻击伤害
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="arbalist">
+                    <h3>弩手 (Arbalist)</h3>
+                    <div class="class-type">重型弓弩</div>
+                    <p><strong>特点：</strong>拥有出色的命中率和物理攻击力，对飞行单位有效</p>
+                    <p><strong>代表角色：</strong>Liza</p>
+                    <p><strong>有效对抗：</strong>飞行单位，中距离目标</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>远程辅助 - 提升远程攻击效果
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="cleric">
+                    <h3>牧师 (Cleric)</h3>
+                    <div class="class-type">治疗支援</div>
+                    <p><strong>特点：</strong>为队友提供恢复和治疗魔法支援</p>
+                    <p><strong>代表角色：</strong>Sharon, Tatiana, Primm</p>
+                    <p><strong>有效对抗：</strong>不死系单位，提供队伍生存</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>治疗辅助 - 战斗中提供持续治疗
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="thief">
+                    <h3>盗贼 (Thief)</h3>
+                    <div class="class-type">敏捷回避</div>
+                    <p><strong>特点：</strong>高回避率和机动性，适合担任前排肉盾</p>
+                    <p><strong>代表角色：</strong>各种角色均可转职</p>
+                    <p><strong>有效对抗：</strong>法师类单位，需要回避的战况</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>回避提升 - 增强队伍回避能力
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="hoplite">
+                    <h3>重装步兵 (Hoplite)</h3>
+                    <div class="class-type">长枪防御</div>
+                    <p><strong>特点：</strong>拥有优秀的物理防御力，具备保护队友的能力</p>
+                    <p><strong>代表角色：</strong>Hodrick, Bryce, Hermann, Beaumont</p>
+                    <p><strong>有效对抗：</strong>骑兵单位，近战威胁</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>抗远程辅助 - 降低远程攻击威胁
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="hunter">
+                    <h3>猎人 (Hunter)</h3>
+                    <div class="class-type">精准射击</div>
+                    <p><strong>特点：</strong>拥有出色的命中率，对飞行敌人有效</p>
+                    <p><strong>代表角色：</strong>Rolf</p>
+                    <p><strong>有效对抗：</strong>飞行单位，远程狙击</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>远程辅助 - 提升射击精度
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="elven-archer">
+                    <h3>精灵弓手 (Elven Archer)</h3>
+                    <div class="class-type">魔法射击</div>
+                    <p><strong>特点：</strong>拥有远程魔法攻击，能够移除队友负面状态</p>
+                    <p><strong>代表角色：</strong>Lhinalagos, Galadmir, Ridiel</p>
+                    <p><strong>有效对抗：</strong>重甲单位，状态净化</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>远程辅助 - 魔法射击支援
+                    </div>
+                </div>
+
+                <div class="class-card" data-class="elven-fencer">
+                    <h3>精灵剑士 (Elven Fencer)</h3>
+                    <div class="class-type">近战魔法</div>
+                    <p><strong>特点：</strong>拥有短距离魔法攻击，能够保护队友</p>
+                    <p><strong>代表角色：</strong>Ithilion, Railanor</p>
+                    <p><strong>有效对抗：</strong>近战威胁，魔法支援</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>魔法辅助 - 提升魔法效果
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced-classes">
+            <h2>高级职业</h2>
+            <div class="promotion-info">
+                <p><strong>晋升条件：</strong>声望达到B级 + 消耗荣誉点数（建议在声望C级时开始储存荣誉）</p>
+            </div>
+            <div class="class-grid">
+                <div class="class-card advanced" data-class="knight">
+                    <h3>骑士 (Knight)</h3>
+                    <div class="class-type">重装骑兵</div>
+                    <p><strong>特点：</strong>攻防兼备，在进攻和防守方面都表现优秀</p>
+                    <p><strong>代表角色：</strong>Adel, Clive</p>
+                    <p><strong>有效对抗：</strong>多种敌人类型，全能型单位</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>快速休息 - 加快队伍恢复速度
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="crusader">
+                    <h3>十字军 (Crusader)</h3>
+                    <div class="class-type">皇家战士</div>
+                    <p><strong>特点：</strong>高贵的战士，能使用反飞行和反装甲技能</p>
+                    <p><strong>代表角色：</strong>Virginia</p>
+                    <p><strong>有效对抗：</strong>飞行单位，重装甲敌人</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>抗远程辅助 - 提供远程防护
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="gladiator">
+                    <h3>角斗士 (Gladiator)</h3>
+                    <div class="class-type">群攻战士</div>
+                    <p><strong>特点：</strong>拥有能够攻击整行敌人的物理攻击技能</p>
+                    <p><strong>代表角色：</strong>Bruno</p>
+                    <p><strong>有效对抗：</strong>密集阵型，多目标作战</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>屏障破坏者 - 削弱敌方防御
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="dark-knight">
+                    <h3>黑骑士 (Dark Knight)</h3>
+                    <div class="class-type">暗黑战士</div>
+                    <p><strong>特点：</strong>拥有在低生命值时威力更强的技能</p>
+                    <p><strong>代表角色：</strong>Gloucester</p>
+                    <p><strong>有效对抗：</strong>高风险高回报战术</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>快速休息 - 危险中的快速恢复
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="gryphon-knight">
+                    <h3>狮鹫骑士 (Gryphon Knight)</h3>
+                    <div class="class-type">飞行骑兵</div>
+                    <p><strong>特点：</strong>拥有高回避率、攻击力和魔法防御力</p>
+                    <p><strong>代表角色：</strong>Fran</p>
+                    <p><strong>有效对抗：</strong>地面骑兵（极度克制），地形无视</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>飞行 - 提供空中机动优势
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="housecarl">
+                    <h3>禁卫军 (Housecarl)</h3>
+                    <div class="class-type">精英战士</div>
+                    <p><strong>特点：</strong>拥有出色的物理攻击力，能降低敌人物理防御</p>
+                    <p><strong>代表角色：</strong>Aubin</p>
+                    <p><strong>有效对抗：</strong>高防御敌人，破甲作战</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>屏障破坏者 - 削弱敌方护甲
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="elven-augur">
+                    <h3>精灵占卜师 (Elven Augur)</h3>
+                    <div class="class-type">精灵法师</div>
+                    <p><strong>特点：</strong>擅长治疗和支援技能，能召唤妖精</p>
+                    <p><strong>代表角色：</strong>Rosalinde</p>
+                    <p><strong>有效对抗：</strong>队伍支援，召唤作战</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>魔法辅助 - 增强魔法效果
+                    </div>
+                </div>
+
+                <div class="class-card advanced" data-class="elven-sibyl">
+                    <h3>精灵女巫 (Elven Sibyl)</h3>
+                    <div class="class-type">高阶治疗</div>
+                    <p><strong>特点：</strong>擅长治疗和支援技能，能召唤妖精助战</p>
+                    <p><strong>代表角色：</strong>Eltolinde</p>
+                    <p><strong>有效对抗：</strong>持续治疗，战场控制</p>
+                    <div class="leader-effect">
+                        <strong>队长效果：</strong>治疗辅助 - 强化治疗能力
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="early-game">
+            <h2>早期职业重点</h2>
+            <div class="promotion-info">
+                <p><strong>游戏初期提示：</strong>利用职业克制关系可造成双倍伤害，大幅提升战斗效率</p>
+            </div>
+            
+            <div class="damage-chart-container">
+                <h3>伤害类型优势图表</h3>
+                <div class="damage-chart-grid">
+                    <div class="damage-chart-item hard-counter">
+                        <div class="chart-attacker">狮鹫骑士</div>
+                        <div class="chart-arrow">→ 双倍伤害 →</div>
+                        <div class="chart-defender">所有骑兵单位</div>
+                        <div class="chart-reason">飞行单位完全压制地面骑兵</div>
+                    </div>
+                    
+                    <div class="damage-chart-item strong-against">
+                        <div class="chart-attacker">弩手/猎人</div>
+                        <div class="chart-arrow">→ 双倍伤害 →</div>
+                        <div class="chart-defender">飞行单位</div>
+                        <div class="chart-reason">远程武器专门克制空中目标</div>
+                    </div>
+                    
+                    <div class="damage-chart-item strong-against">
+                        <div class="chart-attacker">重装步兵</div>
+                        <div class="chart-arrow">→ 双倍伤害 →</div>
+                        <div class="chart-defender">骑兵单位</div>
+                        <div class="chart-reason">长枪阵型完美防御骑兵冲锋</div>
+                    </div>
+                    
+                    <div class="damage-chart-item strong-against">
+                        <div class="chart-attacker">精灵弓手</div>
+                        <div class="chart-arrow">→ 双倍伤害 →</div>
+                        <div class="chart-defender">重甲单位</div>
+                        <div class="chart-reason">魔法攻击无视物理防御</div>
+                    </div>
+                </div>
+                
+                <div class="chart-note">
+                    <strong>重要提示：</strong>合理利用这些克制关系可以在游戏早期获得巨大优势，双倍伤害效果显著提升战斗效率
+                </div>
+            </div>
+        </section>
+
+        <section id="relationships">
+            <h2>职业克制关系</h2>
+            <div class="relationship-container">
+                <div class="relationship-chart">
+                    <h3>主要克制关系</h3>
+                    <div class="relationship-item counter">
+                        <span class="attacker">狮鹫骑士</span> → <span class="defender">骑兵类</span>
+                        <div class="reason">飞行优势完全克制地面骑兵（双倍伤害）</div>
+                    </div>
+                    <div class="relationship-item effective">
+                        <span class="attacker">弩手/猎人</span> → <span class="defender">飞行单位</span>
+                        <div class="reason">远程武器对飞行目标特别有效（双倍伤害）</div>
+                    </div>
+                    <div class="relationship-item effective">
+                        <span class="attacker">重装步兵</span> → <span class="defender">骑兵冲锋</span>
+                        <div class="reason">长枪阵型克制骑兵突击（双倍伤害）</div>
+                    </div>
+                    <div class="relationship-item effective">
+                        <span class="attacker">精灵弓手</span> → <span class="defender">重甲单位</span>
+                        <div class="reason">魔法攻击无视物理防御（双倍伤害）</div>
+                    </div>
+                    <div class="relationship-item effective">
+                        <span class="attacker">角斗士</span> → <span class="defender">密集阵型</span>
+                        <div class="reason">横扫攻击对整列敌人有效</div>
+                    </div>
+                    <div class="relationship-item effective">
+                        <span class="attacker">盗贼</span> → <span class="defender">法师类</span>
+                        <div class="reason">高回避率抵御魔法，适合前排保护</div>
+                    </div>
+                </div>
+
+                <div class="strategy-tips">
+                    <h3>战术建议</h3>
+                    <ul>
+                        <li><strong>双倍伤害：</strong>利用职业克制关系可造成双倍伤害</li>
+                        <li><strong>阵型优化：</strong>将回避型或防御型单位（盗贼、骑士）放在前排</li>
+                        <li><strong>后排保护：</strong>将伤害输出或支援职业放在后排</li>
+                        <li><strong>队长选择：</strong>队长决定部队的总体力值（战斗发起货币）</li>
+                        <li><strong>装备优先：</strong>优先装备提供"+AP或+PP"的道具</li>
+                        <li><strong>追击反击：</strong>启用追击和反击攻击的装备价值极高</li>
+                        <li><strong>晋升策略：</strong>声望C级开始储存荣誉，声望B级进行晋升</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualization">
+            <h2>职业关系可视化</h2>
+            <div class="visualization-container">
+                <div class="class-selector">
+                    <h3>选择职业查看详细关系</h3>
+                    <select id="classSelect">
+                        <option value="">选择职业...</option>
+                        <optgroup label="基础职业">
+                            <option value="fighter">战士 (Fighter)</option>
+                            <option value="arbalist">弩手 (Arbalist)</option>
+                            <option value="cleric">牧师 (Cleric)</option>
+                            <option value="thief">盗贼 (Thief)</option>
+                            <option value="hoplite">重装步兵 (Hoplite)</option>
+                            <option value="hunter">猎人 (Hunter)</option>
+                            <option value="elven-archer">精灵弓手 (Elven Archer)</option>
+                            <option value="elven-fencer">精灵剑士 (Elven Fencer)</option>
+                        </optgroup>
+                        <optgroup label="高级职业">
+                            <option value="knight">骑士 (Knight)</option>
+                            <option value="crusader">十字军 (Crusader)</option>
+                            <option value="gladiator">角斗士 (Gladiator)</option>
+                            <option value="dark-knight">黑骑士 (Dark Knight)</option>
+                            <option value="gryphon-knight">狮鹫骑士 (Gryphon Knight)</option>
+                            <option value="housecarl">禁卫军 (Housecarl)</option>
+                            <option value="elven-augur">精灵占卜师 (Elven Augur)</option>
+                            <option value="elven-sibyl">精灵女巫 (Elven Sibyl)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div id="relationshipDisplay" class="relationship-display">
+                    <p>选择一个职业来查看其克制关系</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Unicorn Overlord 职业系统指南 | 数据基于游戏版本 1.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
